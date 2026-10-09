@@ -1,5 +1,7 @@
 package cars_test
 
+import data.carsdata as hugedata
+
 cardata := {
 	"1000": {"make": "Toyota", "model": "Camry", "fuel": "petrol", "modelyear": 2015, "length": 4850},
 	"1001": {"make": "Honda", "model": "Civic", "fuel": "petrol", "modelyear": 2018, "length": 4550},
@@ -20,4 +22,12 @@ test_func_foobar if {
 	keys := object.keys(cardata)
 	"1010" in keys
 	not "1011" in keys
+}
+
+test_func_foobar2 if {
+	# this line should show line with inlay information on arguments:
+	# keys := object.keys(object: cardata)
+	keys := object.keys(hugedata)
+	"2010" in keys
+	# not "2011" in keys
 }
