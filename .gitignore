@@ -31,6 +31,9 @@ go.work.sum
 # Downloaded OPA binaries
 opa_v*
 
+# Generated test data
+rego/**/*.json
+
 # Editor/IDE
 # .idea/
 # .vscode/
